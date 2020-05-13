@@ -2,11 +2,13 @@ const express= require('express');
 const helmet= require('helmet');
 const auth_route= require('../auth/auth-router.js');
 const user_route= require('../users/user-router.js');
+const cookieParser = require("cookie-parser");
 
 const server= express();
 
 server.use(express.json());
 server.use(helmet());
+server.use(cookieParser());
 
 // route handlers
 server.get('/', async (req, res, next) => {

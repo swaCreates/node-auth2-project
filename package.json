@@ -5,6 +5,7 @@
   "main": "knexfile.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
@@ -16,7 +17,7 @@
     "nodemon": "^2.0.3"
   },
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon -r dotenv/config index.js"
   },
   "repository": {
     "type": "git",
