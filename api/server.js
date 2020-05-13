@@ -20,7 +20,7 @@ server.get('/', async (req, res, next) => {
 });
 
 server.use('/api/auth', auth_route);
-server.use('api/users', user_route);
+server.use('/api/users', user_route);
 
 // handles no supporting route
 server.use((req, res) => {
